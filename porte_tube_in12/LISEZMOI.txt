@@ -1,0 +1,15 @@
+Porte-tube IN-12 v1.0
+=====================
+Carte 25,4 x 36 mm, 2 couches, pour un tube nixie IN-12A / IN-12B monté sur 12 douilles Ø 1 mm.
+
+Fichiers (KiCad 7, s'ouvrent aussi dans KiCad 8, 9 et 10) :
+  porte_tube_in12.kicad_pro / .kicad_sch / .kicad_pcb
+  porte_tube_in12.kicad_sym        symboles du projet
+  porte_tube_in12.pretty/          empreintes du projet (tube, barrettes, R1, trous M2)
+
+J1 (à gauche vu de face, tube en haut)   : 1 K5, 2 K4, 3 K3, 4 K2, 5 K1, 6 virgule (DP), 7 non reliée
+J2 (à droite)                            : 1 K6, 2 K7, 3 K8, 4 K9, 5 K0, 6 absente (clé), 7 +HT (170 V)
+Kn = cathode du chiffre n. R1 (12 k) est en série entre +HT et l'anode.
+
+Tube : perçage 0,9 mm, pastille 2,0 mm (queue de douille passée dans la carte et soudée au dos, douille debout sur la carte).
+Classe d'équipotentielles « HT » (+HT, ANODE) : isolement 1,25 mm.

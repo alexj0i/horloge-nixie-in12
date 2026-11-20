@@ -1,0 +1,5 @@
+# Fins de ligne normalisées dans le dépôt (KiCad sous Windows écrit en CRLF) :
+# évite les faux changements quand on passe d'un PC à l'autre
+* text=auto
+*.zip binary
+*.pdf binary

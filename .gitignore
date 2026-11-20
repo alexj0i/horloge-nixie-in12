@@ -1,0 +1,28 @@
+# --- KiCad : fichiers propres à chaque PC ou régénérés ---
+*.lck
+*.kicad_prl
+fp-info-cache
+*-backups/
+*.bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+~*
+_autosave-*
+\#auto_saved_files#
+
+# Historique local KiCad 10 (contient son propre dépôt git : à ne pas versionner)
+.history/
+
+# Anciennes sauvegardes manuelles (Git garde maintenant l'historique)
+_sauvegarde*/
+
+# Sorties de fabrication régénérables (sauf les dossiers fabrication/ validés)
+gerber/
+gerbers/
+*.gbr
+*.drl
+
+# Système
+Thumbs.db
+desktop.ini
+.DS_Store

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "carte_mere_in12")(type "KiCad")(uri "${KIPRJMOD}/carte_mere_in12.kicad_sym")(options "")(descr "Carte mere IN-12"))
+)
