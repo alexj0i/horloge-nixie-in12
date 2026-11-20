@@ -1,0 +1,50 @@
+** Drc report for carte_mere_in12.kicad_pcb **
+** Created on 2026-11-20T11:54:30 **
+** Report includes: Errors, Warnings **
+
+** Found 8 DRC violations **
+[silk_overlap]: Silkscreen clearance
+    Rule: configuration des contraintes de la sérigraphie; warning
+    @(157.1500 mm, 113.5000 mm): Circle on F.Silkscreen
+    @(155.6100 mm, 113.5000 mm): Segment of DS1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: configuration des contraintes de la sérigraphie; warning
+    @(157.1500 mm, 122.5000 mm): Circle on F.Silkscreen
+    @(155.6100 mm, 122.5000 mm): Segment of DS2 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(152.1000 mm, 104.0000 mm): Segment on F.Silkscreen
+    @(152.0700 mm, 104.0000 mm): PTH pad 1 [DOT1_A] of J13
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(162.2000 mm, 104.0000 mm): Segment on F.Silkscreen
+    @(162.2300 mm, 104.0000 mm): PTH pad 5 [DOT_K] of J13
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(158.4500 mm, 118.0000 mm): PCB text 'v0.2  114,3 x 36 mm' on B.Silkscreen
+    @(159.6900 mm, 122.5000 mm): PTH pad 2 [DOT_K] of DS2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(155.8500 mm, 118.0000 mm): PCB text 'CARTE MERE IN-12' on B.Silkscreen
+    @(154.6100 mm, 113.5000 mm): PTH pad 1 [DOT1_A] of DS1
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(155.8500 mm, 118.0000 mm): PCB text 'CARTE MERE IN-12' on B.Silkscreen
+    @(154.6100 mm, 122.5000 mm): PTH pad 1 [DOT2_A] of DS2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(149.7400 mm, 104.0000 mm): Reference field of J13
+    @(148.3000 mm, 102.5000 mm): NPTH pad of H6
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

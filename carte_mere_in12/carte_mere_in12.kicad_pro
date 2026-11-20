@@ -249,7 +249,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "0.3"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -527,7 +527,6 @@
         "bus_width": 12,
         "clearance": 1.25,
         "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.3,
@@ -552,6 +551,10 @@
       {
         "netclass": "HT",
         "pattern": "+HT"
+      },
+      {
+        "netclass": "HT",
+        "pattern": "DOT*"
       }
     ]
   },
@@ -694,13 +697,18 @@
       {
         "filename": "carte_mere_in12.kicad_sch",
         "name": "carte_mere_in12",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "619df502-da4e-5928-81e6-21547e649199"
       }
     ],
     "used_designators": "",
     "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "619df502-da4e-5928-81e6-21547e649199",
+      "carte_mere_in12"
+    ]
+  ],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {

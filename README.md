@@ -1,8 +1,10 @@
 # Horloge nixie IN-12
 
-Afficheur 4 chiffres à tubes nixie **IN-12A / IN-12B**, piloté par un **Arduino Uno**.
-Un décodeur **SN74141 / K155ID1** par tube (pilotage statique), haute tension **170 V** fournie par un module **NCH6100HV**.
-Chaque tube est monté sur son propre porte-tube, enfiché sur la carte mère.
+Afficheur 4 chiffres à tubes nixie **IN-12A / IN-12B**, avec deux points en néons **INS-1**.
+Un décodeur **SN74141 / K155ID1** par tube (pilotage statique). Chaque tube est monté sur son propre porte-tube, enfiché sur la carte mère.
+La carte arrière (en cours) remplace l'Arduino Uno et le module HT : ATmega328P, horloge DS1307, alimentation 170 V intégrée, tout en traversant.
+
+![Empilement vu de côté](docs/empilement_horloge_in12.png)
 
 ## Contenu
 
@@ -10,9 +12,12 @@ Chaque tube est monté sur son propre porte-tube, enfiché sur la carte mère.
 |---|---|---|
 | `porte_tube_in12/` | Porte-tube individuel 25,4 × 36 mm, tube sur 12 douilles Ø 1 mm, R d'anode 12 kΩ | v1.0 terminé |
 | `porte_tube_in12/fabrication/` | Gerbers + perçages prêts pour JLCPCB | à jour avec v1.0 |
-| `carte_mere_in12/` | Carte mère 114,3 × 36 mm : 4 supports de porte-tubes, 4 × SN74141, connecteurs | v0.2, routage en cours |
-| `carte_mere_in12/docs/` | Schéma de la carte mère en PDF | v0.2 |
-| `firmware/nixie_in12/` | Programme Arduino (horloge, affichage d'un nombre, anti-empoisonnement) | fonctionnel |
+| `carte_mere_in12/` | Carte mère 114,3 × 36 mm : 4 supports de porte-tubes, 4 × SN74141, 2 néons INS-1, connecteurs | schéma v0.3, routage en cours |
+| `carte_mere_in12/docs/` | Schéma de la carte mère en PDF | v0.3 |
+| `carte_arriere_in12/` | Carte arrière 114,3 × 36 mm : ATmega328P, 2 × 74HC595, DS1307, 170 V (MC34063A + IRF740), 5 V (L7805) | schéma v0.1, PCB à faire |
+| `carte_arriere_in12/docs/` | Schéma de la carte arrière en PDF | v0.1 |
+| `firmware/nixie_in12/` | Programme Arduino pour le montage avec un Uno (horloge, affichage d'un nombre, anti-empoisonnement) | fonctionnel, à réécrire pour la carte arrière |
+| `docs/` | Vue de côté de l'empilement (≈ 27 mm de cartes, ≈ 85 mm avec tubes) | |
 
 Projets KiCad 10. Les symboles et empreintes sont dans chaque dossier de projet (`*.kicad_sym`, `*.pretty`) : rien à installer.
 
@@ -25,6 +30,10 @@ Projets KiCad 10. Les symboles et empreintes sont dans chaque dossier de projet 
 | J12 | Commande V3, V4 (2×4, au dos) | 1-4 : V3 A B C D · 5-8 : V4 A B C D |
 | J10 | Logique (au dos) | 1 : +5 V · 2 : GND |
 | J11 | Haute tension (au dos) | 1 : **+HT 170 V** · 2 : clé · 3 : GND |
+| J13 | Deux points (au dos) | 1 : DOT1_A · 3 : DOT2_A · 5 : DOT_K (2 et 4 sans broche) |
+| DS1, DS2 | Néons INS-1 dans l'espace central entre V2 et V3 | 1 : anode · 2 : cathode |
+
+La carte arrière s'enfiche sur J9, J12, J10, J11 et J13 avec des supports femelles (P1 à P5), à 11 mm de la carte mère (entretoises M2 × 11).
 
 Câblage vers l'Uno attendu par le programme (`BCD_PIN`) :
 
@@ -44,7 +53,9 @@ Moniteur série 9600 bauds, fin de ligne « Nouvelle ligne » :
 
 ## Reste à faire
 
-- Carte mère : relier le +5 V entre V1, V2 et V3, et la masse de C1 ; DRC à 0 avant commande.
+- Carte mère : relier le +5 V entre V1, V2 et V3, et la masse de C1 ; placer et router DS1, DS2, J13 ; DRC à 0 avant commande.
+- Carte mère : C5 (10 µF, 5 × 11 mm) touche la carte arrière → modèle bas (≤ 7 mm) ou couché.
+- Carte arrière : dessiner le PCB, puis réécrire le firmware (74HC595, DS1307, boutons, coupure HT, deux points).
 - Mesurer le diamètre de la queue des douilles (perçage prévu pour 0,5–0,75 mm).
 - Vérifier le brochage sur un vrai tube avant de souder (anode = broche 1).
 - Option : points de séparation INS-1 dans l'espace central de la carte mère.

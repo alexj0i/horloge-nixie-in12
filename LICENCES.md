@@ -40,6 +40,9 @@ Les cartes qui utilisent ces empreintes et symboles restent sous la licence du p
 | `carte_mere_in12/carte_mere_in12.pretty/HT_1x03_Cle2.kicad_mod` | dérivée de PinHeader_1x03_P2.54mm_Vertical | renommée, broche 2 remplacée par un trou non métallisé |
 | `carte_mere_in12/carte_mere_in12.pretty/Support_1x07_Gauche.kicad_mod` | dérivée de PinSocket_1x07_P2.54mm_Vertical | renommée, position 7 en trou non métallisé, sérigraphie et courtyard modifiés, modèle 3D retiré |
 | `carte_mere_in12/carte_mere_in12.pretty/Support_1x07_Droite.kicad_mod` | dérivée de PinSocket_1x07_P2.54mm_Vertical | renommée, position 6 en trou non métallisé, sérigraphie et courtyard modifiés, modèle 3D retiré |
+| `carte_mere_in12/carte_mere_in12.pretty/Points_1x05_Cle24.kicad_mod` | dérivée de PinHeader_1x05_P2.54mm_Vertical | renommée, broches 2 et 4 supprimées, modèle 3D retiré |
 | symboles `+5V`, `GND`, `PWR_FLAG` dans `carte_mere_in12/carte_mere_in12.kicad_sym` | bibliothèque `power` | aucune |
+| `carte_arriere_in12/carte_arriere_in12.pretty/*` (toutes les empreintes) | bibliothèques d'empreintes KiCad (Package_DIP, Resistor_THT, Capacitor_THT, etc.) | aucune |
+| `carte_arriere_in12/carte_arriere_in12.kicad_sym` (tous les symboles sauf `Trou_M2`) | bibliothèques de symboles KiCad (Device, 74xx, MCU_Microchip_ATmega, Timer_RTC, Regulator_*, Transistor_*, Connector_*, power) | aucune (symboles dérivés mis à plat) |
 
-Les autres empreintes et symboles (`Nixie_IN-12_Douilles_1mm`, `Barrette_1x07*`, `SN74141`, `IN-12B`, `Support_*`, `Conn_*`, etc.) sont propres au projet et suivent la CC BY-NC-SA 4.0.
+Les autres empreintes et symboles (`Nixie_IN-12_Douilles_1mm`, `Barrette_1x07*`, `INS-1_P5.08mm`, `SN74141`, `IN-12B`, `INS-1`, `Support_*`, `Conn_*`, `Trou_M2`, etc.) sont propres au projet et suivent la CC BY-NC-SA 4.0.
