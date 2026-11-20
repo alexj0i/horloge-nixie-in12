@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: CC-BY-NC-SA-4.0
+// Copyright (c) 2026 Alexian (github.com/alexj0i) - voir LICENSE à la racine du dépôt
 // 4 tubes Nixie IN-12B · Arduino Uno · 4 x K155ID1 / SN74141 · pilotage statique
 // Moniteur série à 9600 bauds, fin de ligne « Nouvelle ligne » :
 //   T1435  -> horloge à 14:35        N42  -> affiche 42

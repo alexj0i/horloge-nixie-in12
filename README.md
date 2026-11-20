@@ -11,6 +11,7 @@ Chaque tube est monté sur son propre porte-tube, enfiché sur la carte mère.
 | `porte_tube_in12/` | Porte-tube individuel 25,4 × 36 mm, tube sur 12 douilles Ø 1 mm, R d'anode 12 kΩ | v1.0 terminé |
 | `porte_tube_in12/fabrication/` | Gerbers + perçages prêts pour JLCPCB | à jour avec v1.0 |
 | `carte_mere_in12/` | Carte mère 114,3 × 36 mm : 4 supports de porte-tubes, 4 × SN74141, connecteurs | v0.2, routage en cours |
+| `carte_mere_in12/docs/` | Schéma de la carte mère en PDF | v0.2 |
 | `firmware/nixie_in12/` | Programme Arduino (horloge, affichage d'un nombre, anti-empoisonnement) | fonctionnel |
 
 Projets KiCad 10. Les symboles et empreintes sont dans chaque dossier de projet (`*.kicad_sym`, `*.pretty`) : rien à installer.
@@ -55,3 +56,10 @@ Moniteur série 9600 bauds, fin de ligne « Nouvelle ligne » :
 ## Travailler sur deux PC
 
 Un seul PC à la fois sur un même projet : **Fetch/Pull** avant d'ouvrir KiCad, **Commit + Push** après l'avoir fermé.
+
+## Licence
+
+[CC BY-NC-SA 4.0](LICENSE) : fabrication et modifications libres pour un usage personnel, en citant l'auteur. **Vente et usage commercial interdits** sans accord écrit. Les versions modifiées doivent être publiées sous la même licence.
+Quelques empreintes et symboles viennent des bibliothèques KiCad et restent sous CC-BY-SA 4.0 : voir [LICENCES.md](LICENCES.md).
+
+Projet fourni sans garantie. Il utilise une haute tension de 170 V : si vous le reproduisez, c'est à vos risques.
