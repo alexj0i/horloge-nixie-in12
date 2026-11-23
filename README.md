@@ -2,9 +2,11 @@
 
 Afficheur 4 chiffres à tubes nixie **IN-12A / IN-12B**, avec deux points en néons **INS-1**.
 Un décodeur **SN74141 / K155ID1** par tube (pilotage statique). Chaque tube est monté sur son propre porte-tube, enfiché sur la carte mère.
-La carte arrière (en cours) remplace l'Arduino Uno et le module HT : ATmega328P, horloge DS1307, alimentation 170 V intégrée, tout en traversant.
+Deux cartes empilées derrière la carte mère remplacent l'Arduino Uno et le module HT (tout en traversant) : une carte logique (ATmega328P, 74HC595, horloge DS1307) et une carte alimentation (12 V, 5 V, 170 V intégré, boutons).
 
 ![Empilement vu de côté](docs/empilement_horloge_in12.png)
+
+L'image montre une seule carte arrière : avec deux cartes, compter ≈ 13 mm de plus (≈ 98 mm au total).
 
 ## Contenu
 
@@ -14,9 +16,10 @@ La carte arrière (en cours) remplace l'Arduino Uno et le module HT : ATmega328P
 | `porte_tube_in12/fabrication/` | Gerbers + perçages prêts pour JLCPCB | à jour avec v1.0 |
 | `carte_mere_in12/` | Carte mère 114,3 × 36 mm : 4 supports de porte-tubes, 4 × SN74141, 2 néons INS-1, connecteurs | schéma v0.3, routage en cours |
 | `carte_mere_in12/docs/` | Schéma de la carte mère en PDF | v0.3 |
-| `carte_arriere_in12/` | Carte arrière 114,3 × 36 mm : ATmega328P, 2 × 74HC595, DS1307, 170 V (MC34063A + IRF740), 5 V (L7805) | schéma v0.1, PCB à faire |
-| `carte_arriere_in12/docs/` | Schéma de la carte arrière en PDF | v0.1 |
-| `firmware/nixie_in12/` | Programme Arduino pour le montage avec un Uno (horloge, affichage d'un nombre, anti-empoisonnement) | fonctionnel, à réécrire pour la carte arrière |
+| `carte_logique_in12/` | Carte logique 114,3 × 36 mm, contre la carte mère : ATmega328P, 2 × 74HC595, DS1307, pilotage des deux points | schéma v0.1, composants placés, à router |
+| `carte_alim_in12/` | Carte alimentation 114,3 × 36 mm, à l'arrière : jack 12 V, 5 V (L7805), 170 V (MC34063A + IRF740), coupure HT, boutons, ICSP, FTDI, pile CR1220 | schéma v0.1, composants placés, à router |
+| `carte_*_in12/docs/` | Schémas en PDF et vues de placement | v0.1 |
+| `firmware/nixie_in12/` | Programme Arduino pour le montage avec un Uno (horloge, affichage d'un nombre, anti-empoisonnement) | fonctionnel, à réécrire pour les nouvelles cartes |
 | `docs/` | Vue de côté de l'empilement (≈ 27 mm de cartes, ≈ 85 mm avec tubes) | |
 
 Projets KiCad 10. Les symboles et empreintes sont dans chaque dossier de projet (`*.kicad_sym`, `*.pretty`) : rien à installer.
@@ -33,7 +36,11 @@ Projets KiCad 10. Les symboles et empreintes sont dans chaque dossier de projet 
 | J13 | Deux points (au dos) | 1 : DOT1_A · 3 : DOT2_A · 5 : DOT_K (2 et 4 sans broche) |
 | DS1, DS2 | Néons INS-1 dans l'espace central entre V2 et V3 | 1 : anode · 2 : cathode |
 
-La carte arrière s'enfiche sur J9, J12, J10, J11 et J13 avec des supports femelles (P1 à P5), à 11 mm de la carte mère (entretoises M2 × 11).
+Empilement (entretoises M2 × 11 entre chaque carte, mêmes 16 trous) :
+carte mère → **carte logique** (supports P1 à P5 sur J9, J12, J10, J11, J13) → **carte alimentation** (JB1 2 × 10 sur JA1, JB2 1 × 3 +HT sur JA2).
+
+Liaison JA1/JB1 : 1 +5V · 2 GND · 3 RESET · 4 DTR · 5 MOSI · 6 MISO · 7 SCK · 8 RXD · 9 TXD · 10 HV_EN · 11 BTN_MODE · 12 BTN_PLUS · 13 BTN_MINUS · 14 LDR · 15 +5V · 16 GND · 17 +5V · 18 GND · 19 VBAT · 20 GND.
+Liaison JA2/JB2 : 1 +HT · 2 sans broche · 3 GND.
 
 Câblage vers l'Uno attendu par le programme (`BCD_PIN`) :
 
@@ -54,8 +61,7 @@ Moniteur série 9600 bauds, fin de ligne « Nouvelle ligne » :
 ## Reste à faire
 
 - Carte mère : relier le +5 V entre V1, V2 et V3, et la masse de C1 ; placer et router DS1, DS2, J13 ; DRC à 0 avant commande.
-- Carte mère : C5 (10 µF, 5 × 11 mm) touche la carte arrière → modèle bas (≤ 7 mm) ou couché.
-- Carte arrière : dessiner le PCB, puis réécrire le firmware (74HC595, DS1307, boutons, coupure HT, deux points).
+- Cartes logique et alimentation : router les PCB (composants déjà placés), puis réécrire le firmware (74HC595, DS1307, boutons, coupure HT, deux points).
 - Mesurer le diamètre de la queue des douilles (perçage prévu pour 0,5–0,75 mm).
 - Vérifier le brochage sur un vrai tube avant de souder (anode = broche 1).
 - Option : points de séparation INS-1 dans l'espace central de la carte mère.

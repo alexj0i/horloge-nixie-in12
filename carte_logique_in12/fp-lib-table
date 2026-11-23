@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "carte_logique_in12")(type "KiCad")(uri "${KIPRJMOD}/carte_logique_in12.pretty")(options "")(descr "Horloge IN-12"))
+)
