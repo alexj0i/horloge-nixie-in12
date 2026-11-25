@@ -16,4 +16,9 @@
   (pad "5" thru_hole circle (at 0 10.16) (size 1.6 1.6) (drill 1) (layers "*.Cu" "*.Mask") (tstamp e4659526-4c1d-4d84-b7b4-7cca087ed775))
   (pad "6" thru_hole circle (at 0 12.7) (size 1.6 1.6) (drill 1) (layers "*.Cu" "*.Mask") (tstamp 963a046d-08fe-43b4-bcb1-53ebc20b5e0e))
   (pad "7" thru_hole circle (at 0 15.24) (size 1.6 1.6) (drill 1) (layers "*.Cu" "*.Mask") (tstamp 4c4a50f0-89b8-48e4-8dfd-c8d89ea27dcd))
+  (model "${KIPRJMOD}/porte_tube_in12.3dshapes/Barrette_1x07_P2.54mm.wrl"
+    (offset (xyz 0 0 0))
+    (scale (xyz 0.3937007874 0.3937007874 0.3937007874))
+    (rotate (xyz 0 0 0))
+  )
 )

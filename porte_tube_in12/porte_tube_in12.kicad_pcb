@@ -407,6 +407,16 @@
       (net 11 "K1") (tstamp 2fda32e4-9eda-4c6f-86c7-4006bed01799))
     (pad "12" thru_hole circle (at 0 9) (size 2 2) (drill 0.9) (layers "*.Cu" "*.Mask")
       (net 12 "DP") (tstamp 3ec4664e-cfad-4a9b-9545-ad0fd978ed04))
+    (model "${KIPRJMOD}/porte_tube_in12.3dshapes/IN-12B.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 0.3937007874 0.3937007874 0.3937007874))
+      (rotate (xyz 0 0 0))
+    )
+    (model "${KIPRJMOD}/porte_tube_in12.3dshapes/SocketContacts_IN12.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 0.3937007874 0.3937007874 0.3937007874))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "porte_tube_in12:Barrette_1x07_P2.54mm_Dos" (layer "B.Cu")
@@ -440,6 +450,11 @@
     (pad "6" thru_hole circle (at 0 -12.7 180) (size 1.6 1.6) (drill 1) (layers "*.Cu" "*.Mask")
       (net 12 "DP") (tstamp f3250dd2-8100-4d65-83ae-51e2ce6066c9))
     (pad "7" thru_hole circle (at 0 -15.24 180) (size 1.6 1.6) (drill 1) (layers "*.Cu" "*.Mask") (tstamp 01891106-f3a1-41e4-9624-a6ea0b324c2b))
+    (model "${KIPRJMOD}/porte_tube_in12.3dshapes/Barrette_1x07_P2.54mm.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 0.3937007874 0.3937007874 0.3937007874))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "porte_tube_in12:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (layer "B.Cu")
@@ -533,6 +548,11 @@
       (net 2 "K0") (tstamp dd7596d2-b12c-4474-91b3-27e094e9d06d))
     (pad "7" thru_hole circle (at 0 -15.24 180) (size 1.6 1.6) (drill 1) (layers "*.Cu" "*.Mask")
       (net 13 "+HT") (tstamp c86778c3-a4a1-482a-bd18-81df16a43485))
+    (model "${KIPRJMOD}/porte_tube_in12.3dshapes/Barrette_1x07_Cle6_P2.54mm.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 0.3937007874 0.3937007874 0.3937007874))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (gr_line (start 100.9 83.7) (end 100 82.8)

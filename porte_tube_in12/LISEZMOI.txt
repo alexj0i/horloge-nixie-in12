@@ -13,3 +13,10 @@ Kn = cathode du chiffre n. R1 (12 k) est en série entre +HT et l'anode.
 
 Tube : perçage 0,9 mm, pastille 2,0 mm (queue de douille passée dans la carte et soudée au dos, douille debout sur la carte).
 Classe d'équipotentielles « HT » (+HT, ANODE) : isolement 1,25 mm.
+
+Modèles 3D (visualisation KiCad)
+----------------------------------
+Le dossier porte_tube_in12.3dshapes contient les modèles du tube IN-12A et IN-12B, des 12 douilles femelles et des barrettes mâles J1/J2.
+Les broches du tube suivent exactement les centres des pastilles 1 à 12 de l'empreinte; la barrette J2 omet la broche 6, conformément à la clé +HT.
+L'empreinte générique de la bibliothèque affiche IN-12A par défaut. La carte d'exemple conserve son tube IN-12B et affiche donc le modèle avec virgule.
+Dimensions de visualisation: enveloppe 21 x 32 mm, hauteur totale 35 mm, broches Ø1,02 mm. Les formes internes et contacts sont simplifiés; contrôler les dimensions d'un tube réel avant toute conception mécanique.

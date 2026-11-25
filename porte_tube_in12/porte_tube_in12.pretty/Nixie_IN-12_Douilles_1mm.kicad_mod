@@ -54,4 +54,14 @@
   (pad "10" thru_hole circle (at -5.75 4.5) (size 2 2) (drill 0.9) (layers "*.Cu" "*.Mask") (tstamp 51e83f03-7ea9-497a-8733-e06d8294b370))
   (pad "11" thru_hole circle (at -4 8) (size 2 2) (drill 0.9) (layers "*.Cu" "*.Mask") (tstamp ac059edd-2768-4c47-8ed1-2a8369e2e4d7))
   (pad "12" thru_hole circle (at 0 9) (size 2 2) (drill 0.9) (layers "*.Cu" "*.Mask") (tstamp 8f2f2405-8e6a-40f0-8aad-20f9226c1a3b))
+  (model "${KIPRJMOD}/porte_tube_in12.3dshapes/IN-12A.wrl"
+    (offset (xyz 0 0 0))
+    (scale (xyz 0.3937007874 0.3937007874 0.3937007874))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/porte_tube_in12.3dshapes/SocketContacts_IN12.wrl"
+    (offset (xyz 0 0 0))
+    (scale (xyz 0.3937007874 0.3937007874 0.3937007874))
+    (rotate (xyz 0 0 0))
+  )
 )
