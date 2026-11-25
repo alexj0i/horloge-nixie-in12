@@ -4,9 +4,10 @@ Afficheur 4 chiffres à tubes nixie **IN-12A / IN-12B**, avec deux points en né
 Un décodeur **SN74141 / K155ID1** par tube (pilotage statique). Chaque tube est monté sur son propre porte-tube, enfiché sur la carte mère.
 Deux cartes empilées derrière la carte mère remplacent l'Arduino Uno et le module HT (tout en traversant) : une carte logique (ATmega328P, 74HC595, horloge DS1307) et une carte alimentation (12 V, 5 V, 170 V intégré, boutons).
 
-![Empilement vu de côté](docs/empilement_horloge_in12.png)
-
-L'image montre une seule carte arrière : avec deux cartes, compter ≈ 13 mm de plus (≈ 98 mm au total).
+<p>
+  <img src="docs/tube_in12.png" alt="Tube nixie IN-12 allumé" height="260">
+  <img src="docs/neon_ins1.png" alt="Néon INS-1 allumé" height="260">
+</p>
 
 ## Contenu
 
@@ -20,7 +21,7 @@ L'image montre une seule carte arrière : avec deux cartes, compter ≈ 13 mm de
 | `carte_alim_in12/` | Carte alimentation 114,3 × 36 mm, à l'arrière : jack 12 V, 5 V (L7805), 170 V (MC34063A + IRF740), coupure HT, boutons, ICSP, FTDI, pile CR1220 | schéma v0.1, composants placés, à router |
 | `carte_*_in12/docs/` | Schémas en PDF et vues de placement | v0.1 |
 | `firmware/nixie_in12/` | Programme Arduino pour le montage avec un Uno (horloge, affichage d'un nombre, anti-empoisonnement) | fonctionnel, à réécrire pour les nouvelles cartes |
-| `docs/` | Vue de côté de l'empilement (≈ 27 mm de cartes, ≈ 85 mm avec tubes) | |
+| `docs/` | Photos du tube IN-12 et du néon INS-1 | |
 
 Projets KiCad 10. Les symboles et empreintes sont dans chaque dossier de projet (`*.kicad_sym`, `*.pretty`) : rien à installer.
 
